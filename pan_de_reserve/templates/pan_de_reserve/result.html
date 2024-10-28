@@ -1,6 +1,96 @@
-{% load static%}
 <!DOCTYPE html>
 <html lang="ja">
-<h1>Result</h1>
-HelloWorld
-ok
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>パン屋</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            width: 100%;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .product {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        .quantity {
+            display: flex;
+            align-items: center;
+        }
+        .checkout {
+            text-align: right;
+            margin-top: 20px;
+        }
+        .checkout button {
+            background-color: pink;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .total {
+            text-align: right;
+            margin-top: 10px;
+        }
+        .header {
+            background-color: lightgray;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+        .inputtext {
+            color:rgba(43, 32, 32, 0.76) ;
+            font-size: 18px;
+            border-left: 0;
+            border-right: 0;
+            width: 600px;
+            line-height: 3rem;
+            text-align: center;
+            border: 1px solid #D7DBDD;
+            padding: 0 10px;
+        }
+    </style>
+</head>
+<body>
+      <div class="container">
+        <!-- Header section -->
+        <div class="header">
+            <h1>パン屋</h1>
+        </div>
+
+        <div class="inputtext">
+            <h1>予約が完了しました</h1>
+        </div>
+        <div class="inputtext">
+            <h1>来店時間<h1><p id="savedTime">Loading...</p>
+        </div>
+
+        <!-- Total and checkout -->
+        <div class="checkout">
+            <button class="checkout-button">レジに進む</button>
+        </div>
+    </div>
+    <script>
+        const products = document.querySelectorAll('.product');
+        const savedTime = localStorage.getItem('time');
+        const savedTimeElement = document.getElementById('savedTime');
+        if (savedTime) {
+            savedTimeElement.textContent = `来店時間: ${savedTime}`;
+        } else {
+            savedTimeElement.textContent = "NULL";
+        }
+        
+        const checkoutButton = document.querySelector('.checkout-button');
+        checkoutButton.addEventListener('click', () => {
+            // 遷移先のURLを指定
+            window.location.href = '/index'; // ここを遷移先のページに変更
+        });
+
+    </script>
+</body>
+</html>
+</html>
