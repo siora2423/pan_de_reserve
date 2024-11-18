@@ -1,3 +1,49 @@
-p{
-    color: blue;
-}
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            width: 100%;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .product {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        .quantity {
+            display: flex;
+            align-items: center;
+        }
+        .checkout {
+            text-align: right;
+            margin-top: 20px;
+        }
+        .checkout button {
+            background-color: pink;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .total {
+            text-align: right;
+            margin-top: 10px;
+        }
+        .header {
+            background-color: lightgray;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+        .inputtext {
+            color:rgba(43, 32, 32, 0.76) ;
+            font-size: 18px;
+            border-left: 0;
+            border-right: 0;
+            width: 600px;
+            line-height: 3rem;
+            text-align: center;
+            border: 1px solid #D7DBDD;
+            padding: 0 10px;
+        }       
