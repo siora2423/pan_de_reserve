@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>パン屋</title>
+    <link rel="stylesheet" href="{% static 'css/result.css' %}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header section -->
+        <div class="header">
+            <h1>パン屋</h1>
+        </div>
+
+    <div class="item-details">
+        
+        <!-- Total and checkout -->
+        <div class="checkout">
+            <button class="checkout-button">最初に戻る</button>
+        </div>
+    </div> 
+    <script>
+        
+        const checkoutButton = document.querySelector('.checkout-button');
+        checkoutButton.addEventListener('click', () => {
+            // 遷移先のURLを指定
+            window.location.href = '/'; // ここを遷移先のページに変更
+        });
+
+    </script>
+</body>
+</html>

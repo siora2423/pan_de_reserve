@@ -5,5 +5,5 @@ urlpatterns = [
 	path('', views.index, name="index"),
 	path('nyuryoku/', views.nyuryoku, name="nyuryoku"),
 	path('result/', views.result, name="result"),
-    path('index/', views.index, name="index"),
+    path('add_pan/', views.add_pan, name="add_pan"),
 ]
