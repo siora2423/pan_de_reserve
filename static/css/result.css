@@ -47,3 +47,9 @@
             border: 1px solid #D7DBDD;
             padding: 0 10px;
         }       
+        .configbutton {
+            background-color: rgba(165, 38, 64, 0.541);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }

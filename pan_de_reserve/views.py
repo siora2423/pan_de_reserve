@@ -11,3 +11,6 @@ def result(request):
 
 def add_pan(request):
     return render(request, 'pan_de_reserve/add_pan.html')
+
+def management(request):
+    return render(request, 'pan_de_reserve/management.html')
